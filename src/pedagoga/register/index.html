@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Definição do conjunto de caracteres e da viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página -->
+    <title>Banco de Dados | Cadastrar Pedagoga</title>
+    <!-- Importação de arquivos CSS -->
+    <link href="/src/output.css" rel="stylesheet">
+    <link href="/src/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Barra de navegação -->
+    <nav class="bg-gray-800 p-6 mb-12">
+        <div class="container max-w-screen-xl mx-auto flex justify-between items-center">
+            <!-- Logo ou título -->
+            <div class="text-white text-lg font-bold">
+                <a href="/src/index.html">Banco de Dados</a>
+            </div>
+            <!-- Links de navegação -->
+            <div class="flex space-x-4">
+                <a href="/src/index.html" class="text-white">Início</a>
+                <a href="/src/crianca/list/index.html" class="text-white">Crianças</a>
+                <a href="/src/pedagoga/list/index.html" class="text-white">Pedagoga</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main class="max-w-screen-xl m-auto">
+        <div class="container bg-white rounded-lg py-8 pb-[4.5rem]">
+            <!-- Título do formulário -->
+            <h2 class="text-center font-bold text-2xl mb-8">Cadastrar Pedagoga</h2>
+            <!-- Formulário de cadastro -->
+            <form class="w-2/3 mx-auto" id="form">
+                <div id="form-fields">
+                    <!-- Campos do formulário -->
+                    <div class="grid md:grid-cols-2 md:gap-6">
+                        <!-- Campo para o nome -->
+                        <div class="relative z-0 w-full mb-5 group">
+                            <input
+                                class="block py-2.5 px-0 w-full md:w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-gray-900 dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                type="text" name="nome" id="nome" placeholder=" ">
+                            <label
+                                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                                for="nome">Nome</label>
+                        </div>
+
+                        <!-- Campo para o sobrenome -->
+                        <div class="relative z-0 w-full mb-5 group">
+                            <input
+                                class="block py-2.5 px-0 w-full md:w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-gray-900 dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                type="text" name="sobrenome" id="sobrenome" placeholder=" ">
+                            <label
+                                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                                for="sobrenome">Sobrenome</label>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 md:gap-6">
+                        <!-- Campo para o CPF -->
+                        <div class="relative z-0 w-full mb-5 group">
+                            <input
+                                class="block py-2.5 px-0 w-full md:w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-gray-900 dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                type="text" name="cpf" id="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                                oninput="formatarCpf(this)" placeholder=" ">
+                            <label
+                                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                                for="cpf">CPF</label>
+                        </div>
+
+                        <!-- Campo para o número da sala -->
+                        <div class="relative z-0 w-full mb-5 group">
+                            <select id="numero_sala" name="numero_sala" autocomplete="numero_sala"
+                                class="block py-2.5 px-0 w-full md:w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-gray-900 dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer">
+                                <option selected disabled>Selecione o número da sala</option>
+                            </select>
+
+                            <label
+                                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                                for="numero_sala">Número da Sala</label>
+                        </div>
+
+                        <!-- Campo para o sexo -->
+                        <div class="relative z-0 w-full mb-5 group">
+                            <select id="id_sexo" name="id_sexo" autocomplete="id_sexo"
+                                class="block py-2.5 px-0 w-full md:w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-gray-900 dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer">
+                                <option selected disabled>Selecione seu sexo</option>
+                                <option value="1">Masculino</option>
+                                <option value="2">Feminino</option>
+                                <option value="3">Não desejo informar</option>
+                            </select>
+
+                            <label
+                                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                                for="id_sexo">Sexo</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botões de envio e cancelamento -->
+                <button type="submit"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm float-end w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Cadastrar</button>
+
+                <button type="button" id="cancelButton"
+                    class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm float-start w-full sm:w-auto px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">Cancelar</button>
+
+            </form>
+        </div>
+    </main>
+
+    <!-- Script de registro -->
+    <script src="/src/scripts/registerScript.js"></script>
+</body>
+
+</html>

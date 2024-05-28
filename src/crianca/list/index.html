@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Metadados do documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página -->
+    <title>Banco de Dados | Lista de Crianças</title>
+    <!-- Links para arquivos de estilo -->
+    <link href="/src/output.css" rel="stylesheet">
+    <link href="/src/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Barra de navegação -->
+    <nav class="bg-gray-800 p-6 mb-12">
+        <div class="container max-w-screen-xl mx-auto flex justify-between items-center">
+            <!-- Logo ou título -->
+            <div class="text-white text-lg font-bold">
+                <a href="/src/index.html">Banco de Dados</a>
+            </div>
+            <!-- Links de navegação -->
+            <div class="flex space-x-4">
+                <a href="/src/index.html" class="text-white">Início</a>
+                <a href="/src/crianca/list/index.html" class="text-white">Crianças</a>
+                <a href="/src/pedagoga/list/index.html" class="text-white">Pedagoga</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main class="m-auto max-w-screen-2xl">
+        <div class="container mb-16">
+            <div class="w-full">
+                <!-- Cabeçalho da página -->
+                <div class="flex justify-between items-center w-full">
+                    <h2 class="text-center font-bold text-2xl mb-8 flex-grow">Lista de Crianças</h2>
+                    <!-- Botão para cadastrar nova criança -->
+                    <button type="button"
+                        class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+                        onclick="registerButton()">Cadastrar</button>
+                </div>
+            </div>
+
+            <!-- Contêiner da tabela -->
+            <div id="table-container">
+                <!-- Tabela de crianças -->
+                <table class="table-auto m-auto w-full text-sm text-center rtl:text-right text-gray-500 shadow">
+                    <!-- Cabeçalho da tabela -->
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                        <tr>
+                            <th class="px-6 py-3">Nome</th>
+                            <th class="px-6 py-3">Sobrenome</th>
+                            <th class="px-6 py-3">Data nascimento</th>
+                            <th class="px-6 py-3">Numero</th>
+                            <th class="px-6 py-3">Quadra</th>
+                            <th class="px-6 py-3">Bairro</th>
+                            <th class="px-6 py-3">Cidade</th>
+                            <th class="px-6 py-3">Estado</th>
+                            <th class="px-6 py-3">CEP</th>
+                            <th class="px-6 py-3">Sexo</th>
+                            <th class="px-6 py-3">Editar</th>
+                            <th class="px-6 py-3">Deletar</th>
+                        </tr>
+                    </thead>
+                    <!-- Corpo da tabela (será preenchido dinamicamente) -->
+                    <tbody class="bg-gray-50">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script para manipulação da lista de crianças -->
+    <script src="/src/scripts/listScript.js"></script>
+</body>
+
+</html>

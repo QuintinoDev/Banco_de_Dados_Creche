@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- Define o tipo de documento como HTML5 e especifica o idioma como português brasileiro -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define a viewport para tornar o layout responsivo em dispositivos móveis -->
+    <title>Banco de Dados | Início</title>
+    <!-- Define o título da página que aparece na aba do navegador -->
+    <link href="/src/output.css" rel="stylesheet">
+    <!-- Link para um arquivo CSS chamado output.css na pasta /src -->
+    <link rel="stylesheet" href="main.css">
+    <!-- Link para um arquivo CSS chamado main.css no mesmo diretório -->
+</head>
+
+<body class="">
+    <!-- Início do corpo do documento. O atributo class está vazio, mas pode ser usado para aplicar classes CSS -->
+
+    <!-- Barra de navegação -->
+    <nav class="bg-gray-800 p-6 mb-12">
+        <div class="container max-w-screen-xl mx-auto flex justify-between items-center">
+            <!-- Logo ou título -->
+            <div class="text-white text-lg font-bold">
+                <a href="/src/index.html">Banco de Dados</a>
+            </div>
+            <!-- Links de navegação -->
+            <div class="flex space-x-4">
+                <a href="/src/index.html" class="text-white">Início</a>
+                <a href="/src/crianca/list/index.html" class="text-white">Crianças</a>
+                <a href="/src/pedagoga/list/index.html" class="text-white">Pedagoga</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-screen-xl m-auto">
+        <!-- Elemento principal com largura máxima definida e centralizado horizontalmente -->
+        <div class="container grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Container com display grid, uma coluna por padrão e duas colunas em telas médias, com espaçamento entre os itens -->
+            <div class="border border-gray-200 rounded-lg shadow bg-white">
+                <!-- Div com borda cinza clara, cantos arredondados, sombra e fundo branco -->
+                <a href="/src/crianca/list/index.html">
+                    <!-- Link para a lista de crianças -->
+                    <div class="p-4">
+                        <!-- Div com padding de 4 -->
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-600">Crianças</h5>
+                        <!-- Título de nível 5 com margem inferior, texto grande, negrito, espaçamento apertado entre letras e cor de texto cinza escuro -->
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Cadastre, gerencie e edite a lista
+                            de crianças aqui.</p>
+                        <!-- Parágrafo com margem inferior, texto normal e cor de texto cinza (escuro em tema claro e claro em tema escuro) -->
+                    </div>
+                </a>
+            </div>
+
+            <div class="border border-gray-200 rounded-lg shadow bg-white">
+                <!-- Div similar à anterior, mas para pedagogas -->
+                <a href="/src/pedagoga/list/index.html">
+                    <!-- Link para a lista de pedagogas -->
+                    <div class="p-5">
+                        <!-- Div com padding de 5 -->
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-600">Pedagogas</h5>
+                        <!-- Título de nível 5 para pedagogas -->
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Cadastre, gerencie e edite a lista
+                            de pedagogas aqui.</p>
+                        <!-- Parágrafo para pedagogas -->
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+    <!-- Fim do elemento principal -->
+</body>
+<!-- Fim do corpo do documento -->
+
+</html>
+<!-- Fim do documento HTML -->

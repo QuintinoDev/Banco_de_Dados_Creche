@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Definição do tipo de documento e idioma -->
+    <meta charset="UTF-8"> <!-- Codificação de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuração da visualização para dispositivos móveis -->
+    <title>Banco de Dados | Lista de Pedagogas</title> <!-- Título da página -->
+    <link href="/src/output.css" rel="stylesheet"> <!-- Importação do arquivo de estilos "output.css" -->
+    <link href="/src/main.css" rel="stylesheet"> <!-- Importação do arquivo de estilos "main.css" -->
+</head>
+
+<body>
+
+    <!-- Barra de navegação -->
+    <nav class="bg-gray-800 p-6 mb-12">
+        <div class="container max-w-screen-xl mx-auto flex justify-between items-center">
+            <!-- Logo ou título -->
+            <div class="text-white text-lg font-bold">
+                <a href="/src/index.html">Banco de Dados</a>
+            </div>
+            <!-- Links de navegação -->
+            <div class="flex space-x-4">
+                <a href="/src/index.html" class="text-white">Início</a>
+                <a href="/src/crianca/list/index.html" class="text-white">Crianças</a>
+                <a href="/src/pedagoga/list/index.html" class="text-white">Pedagoga</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="m-auto max-w-screen-2xl">
+        <!-- Conteúdo principal -->
+        <div class="container mb-16">
+            <div class="w-full">
+                <div class="flex justify-between items-center w-full">
+                    <!-- Título da seção -->
+                    <h2 class="text-center font-bold text-2xl mb-8 flex-grow">Lista de Pedagogas</h2>
+                    <!-- Botão de cadastro -->
+                    <button type="button"
+                        class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800" onclick="registerButton()">Cadastrar</button>
+                </div>
+            </div>
+
+            <div id="table-container">
+                <!-- Tabela para exibir os dados -->
+                <table class="table-auto m-auto w-full text-sm text-center rtl:text-right text-gray-500 shadow">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                        <!-- Cabeçalho da tabela -->
+                        <tr>
+                            <th class="px-6 py-3">Nome</th>
+                            <th class="px-6 py-3">Sobrenome</th>
+                            <th class="px-6 py-3">CPF</th>
+                            <th class="px-6 py-3">Numero da Sala</th>
+                            <th class="px-6 py-3">Sexo</th>
+                            <th class="px-6 py-3">Editar</th>
+                            <th class="px-6 py-3">Deletar</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-gray-50">
+                        <!-- Corpo da tabela, onde os dados serão inseridos dinamicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="/src/scripts/listScript.js"></script> <!-- Importação do arquivo de script "listScript.js" -->
+</body>
+
+</html>
